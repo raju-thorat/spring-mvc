@@ -15,13 +15,13 @@ public class MyInterceptor3 extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
-		logger.info("MyInterceptor3 : preHandle, URI: " + request.getRequestURI());
+		logger.info("MyInterceptor3 : preHandle, URI: {}", request.getRequestURI());
 		return true;
 	}
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
-		logger.info("MyInterceptor3 : postHandle, URI: " + request.getRequestURI());
+		logger.info("MyInterceptor3 : postHandle, URI: {}", request.getRequestURI());
 	}
 }
